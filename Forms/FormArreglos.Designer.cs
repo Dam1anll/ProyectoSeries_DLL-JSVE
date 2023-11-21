@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.btnMostrarArreglos = new System.Windows.Forms.Button();
             this.btnIngresarArreglos = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.lbNombres = new System.Windows.Forms.ListBox();
@@ -39,6 +38,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.btnOrdenarCapitulos = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -51,16 +53,6 @@
             this.label1.Size = new System.Drawing.Size(165, 42);
             this.label1.TabIndex = 0;
             this.label1.Text = "Arreglos";
-            // 
-            // btnMostrarArreglos
-            // 
-            this.btnMostrarArreglos.Location = new System.Drawing.Point(75, 220);
-            this.btnMostrarArreglos.Name = "btnMostrarArreglos";
-            this.btnMostrarArreglos.Size = new System.Drawing.Size(185, 43);
-            this.btnMostrarArreglos.TabIndex = 1;
-            this.btnMostrarArreglos.Text = "Mostrar";
-            this.btnMostrarArreglos.UseVisualStyleBackColor = true;
-            this.btnMostrarArreglos.Click += new System.EventHandler(this.btnMostrarArreglos_Click);
             // 
             // btnIngresarArreglos
             // 
@@ -89,7 +81,8 @@
             this.lbNombres.ForeColor = System.Drawing.SystemColors.InactiveBorder;
             this.lbNombres.FormattingEnabled = true;
             this.lbNombres.ItemHeight = 16;
-            this.lbNombres.Location = new System.Drawing.Point(368, 142);
+            this.lbNombres.Location = new System.Drawing.Point(366, 142);
+            this.lbNombres.MultiColumn = true;
             this.lbNombres.Name = "lbNombres";
             this.lbNombres.Size = new System.Drawing.Size(123, 240);
             this.lbNombres.TabIndex = 5;
@@ -158,12 +151,45 @@
             this.label5.TabIndex = 11;
             this.label5.Text = "Capitulos";
             // 
+            // btnOrdenarCapitulos
+            // 
+            this.btnOrdenarCapitulos.Location = new System.Drawing.Point(75, 322);
+            this.btnOrdenarCapitulos.Name = "btnOrdenarCapitulos";
+            this.btnOrdenarCapitulos.Size = new System.Drawing.Size(185, 45);
+            this.btnOrdenarCapitulos.TabIndex = 12;
+            this.btnOrdenarCapitulos.Text = "Ordenar";
+            this.btnOrdenarCapitulos.UseVisualStyleBackColor = true;
+            this.btnOrdenarCapitulos.Click += new System.EventHandler(this.btnOrdenarCapitulos_Click);
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.Location = new System.Drawing.Point(75, 220);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(185, 45);
+            this.btnEditar.TabIndex = 13;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Location = new System.Drawing.Point(75, 271);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(185, 45);
+            this.btnEliminar.TabIndex = 14;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
             // FormArreglos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnEliminar);
+            this.Controls.Add(this.btnEditar);
+            this.Controls.Add(this.btnOrdenarCapitulos);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -173,7 +199,6 @@
             this.Controls.Add(this.lbNombres);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnIngresarArreglos);
-            this.Controls.Add(this.btnMostrarArreglos);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormArreglos";
@@ -186,15 +211,17 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnMostrarArreglos;
         private System.Windows.Forms.Button btnIngresarArreglos;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ListBox lbNombres;
         private System.Windows.Forms.ListBox lbDescripcion;
         private System.Windows.Forms.ListBox lbCapitulos;
         private System.Windows.Forms.TextBox txtTamaño;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnOrdenarCapitulos;
+        private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.Button btnEliminar;
+        public System.Windows.Forms.ListBox lbNombres;
     }
 }
