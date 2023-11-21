@@ -36,11 +36,11 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(315, 57);
+            this.label1.Location = new System.Drawing.Point(332, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(119, 42);
+            this.label1.Size = new System.Drawing.Size(104, 42);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Colas";
+            this.label1.Text = "Pilas";
             // 
             // FormPilas
             // 

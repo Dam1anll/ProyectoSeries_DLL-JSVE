@@ -52,7 +52,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(137, 478);
+            this.panel1.Size = new System.Drawing.Size(179, 478);
             this.panel1.TabIndex = 0;
             // 
             // btnColas
@@ -62,13 +62,12 @@
             this.btnColas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnColas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnColas.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnColas.Location = new System.Drawing.Point(0, 188);
+            this.btnColas.Location = new System.Drawing.Point(0, 284);
             this.btnColas.Name = "btnColas";
             this.btnColas.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.btnColas.Size = new System.Drawing.Size(137, 42);
+            this.btnColas.Size = new System.Drawing.Size(179, 73);
             this.btnColas.TabIndex = 4;
             this.btnColas.Text = "Colas";
-            this.btnColas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnColas.UseVisualStyleBackColor = true;
             this.btnColas.Click += new System.EventHandler(this.btnColas_Click);
             // 
@@ -79,13 +78,12 @@
             this.btnPilas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPilas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPilas.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnPilas.Location = new System.Drawing.Point(0, 146);
+            this.btnPilas.Location = new System.Drawing.Point(0, 206);
             this.btnPilas.Name = "btnPilas";
             this.btnPilas.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.btnPilas.Size = new System.Drawing.Size(137, 42);
+            this.btnPilas.Size = new System.Drawing.Size(179, 78);
             this.btnPilas.TabIndex = 3;
             this.btnPilas.Text = "Pilas";
-            this.btnPilas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPilas.UseVisualStyleBackColor = true;
             this.btnPilas.Click += new System.EventHandler(this.btnPilas_Click);
             // 
@@ -96,13 +94,12 @@
             this.btnListas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnListas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnListas.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnListas.Location = new System.Drawing.Point(0, 104);
+            this.btnListas.Location = new System.Drawing.Point(0, 134);
             this.btnListas.Name = "btnListas";
             this.btnListas.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.btnListas.Size = new System.Drawing.Size(137, 42);
+            this.btnListas.Size = new System.Drawing.Size(179, 72);
             this.btnListas.TabIndex = 2;
             this.btnListas.Text = "Listas";
-            this.btnListas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnListas.UseVisualStyleBackColor = true;
             this.btnListas.Click += new System.EventHandler(this.btnListas_Click);
             // 
@@ -111,15 +108,15 @@
             this.btnArreglos.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnArreglos.FlatAppearance.BorderSize = 0;
             this.btnArreglos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnArreglos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnArreglos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.btnArreglos.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnArreglos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnArreglos.Location = new System.Drawing.Point(0, 62);
             this.btnArreglos.Name = "btnArreglos";
             this.btnArreglos.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.btnArreglos.Size = new System.Drawing.Size(137, 42);
+            this.btnArreglos.Size = new System.Drawing.Size(179, 72);
             this.btnArreglos.TabIndex = 1;
             this.btnArreglos.Text = "Arreglos";
-            this.btnArreglos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnArreglos.UseVisualStyleBackColor = true;
             this.btnArreglos.Click += new System.EventHandler(this.btnArreglos_Click);
             // 
@@ -130,7 +127,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(137, 62);
+            this.panel2.Size = new System.Drawing.Size(179, 62);
             this.panel2.TabIndex = 1;
             // 
             // label1
@@ -138,7 +135,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(23, 18);
+            this.label1.Location = new System.Drawing.Point(41, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(99, 36);
             this.label1.TabIndex = 1;
@@ -148,17 +145,18 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.panel3.Location = new System.Drawing.Point(137, 0);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(179, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(797, 62);
+            this.panel3.Size = new System.Drawing.Size(741, 62);
             this.panel3.TabIndex = 1;
             // 
             // panelContenedor
             // 
-            this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelContenedor.Location = new System.Drawing.Point(137, 62);
+            this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContenedor.Location = new System.Drawing.Point(179, 62);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(783, 416);
+            this.panelContenedor.Size = new System.Drawing.Size(741, 416);
             this.panelContenedor.TabIndex = 2;
             // 
             // FormMainMenu
