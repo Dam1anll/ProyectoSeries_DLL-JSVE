@@ -29,14 +29,14 @@ namespace ProyectoSeries_DLL_JSVE.Forms
         {
             try
             {
-                if (txtTamaño.Text.Trim() != "") 
+                if (txtTamaño.Text.Trim() != "")
                 {
                     tamaño = int.Parse(txtTamaño.Text.Trim());
                     nombres = new string[tamaño];
                     capitulos = new int[tamaño];
                     descripcion = new string[tamaño];
 
-                    for (int x = 0; x < tamaño; x++) 
+                    for (int x = 0; x < tamaño; x++)
                     {
                         nombres[x] = Interaction.InputBox("Escribe el nombre de la serie");
                         descripcion[x] = Interaction.InputBox("Escribe una descripcion sobre la serie");
@@ -45,14 +45,9 @@ namespace ProyectoSeries_DLL_JSVE.Forms
 
                     for (int x = 0; x < tamaño; x++)
                     {
-                        lbNombres.Items.Add(nombres[x]);
-                        lbDescripcion.Items.Add(descripcion[x]);
-                        lbCapitulos.Items.Add(capitulos[x]);
+                        GridArreglos.Rows.Add(nombres[x], descripcion[x], capitulos[x]);
                     }
-
                 }
-                 
-                
             }
             catch (Exception ex)
             {
@@ -67,9 +62,7 @@ namespace ProyectoSeries_DLL_JSVE.Forms
             capitulos = new int[0];
             descripcion = new string[0];
 
-            lbNombres.Items.Clear();
-            lbDescripcion.Items.Clear();
-            lbCapitulos.Items.Clear();
+            GridArreglos.Rows.Clear();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -90,9 +83,9 @@ namespace ProyectoSeries_DLL_JSVE.Forms
         {
             try
             {
-                if (lbNombres.SelectedIndex != -1) 
+                if (GridArreglos.SelectedRows.Count > 0)
                 {
-                    int y = lbNombres.SelectedIndex;
+                    int y = GridArreglos.SelectedRows[0].Index;
 
                     string nombreActual = nombres[y];
                     string descripcionActual = descripcion[y];
@@ -106,13 +99,13 @@ namespace ProyectoSeries_DLL_JSVE.Forms
                     descripcion[y] = nuevaDescripcion;
                     capitulos[y] = nuevosCapitulos;
 
-                    lbNombres.Items[y] = nuevoNombre;
-                    lbDescripcion.Items[y] = nuevaDescripcion;
-                    lbCapitulos.Items[y] = nuevosCapitulos;
+                    GridArreglos.Rows[y].Cells["NombreSerie"].Value = nuevoNombre;
+                    GridArreglos.Rows[y].Cells["DescripcionSerie"].Value = nuevaDescripcion;
+                    GridArreglos.Rows[y].Cells["NroCapitulosSerie"].Value = nuevosCapitulos;
                 }
                 else
                 {
-                    MessageBox.Show("Selecciona un elemento para editar.");
+                    MessageBox.Show("Selecciona una fila para editar.");
                 }
             }
             catch (Exception ex)
@@ -154,16 +147,11 @@ namespace ProyectoSeries_DLL_JSVE.Forms
 
         private void ActualizarListas()
         {
-      
-            lbNombres.Items.Clear();
-            lbDescripcion.Items.Clear();
-            lbCapitulos.Items.Clear();
+            GridArreglos.Rows.Clear();
 
             for (int x = 0; x < tamaño; x++)
             {
-                lbNombres.Items.Add(nombres[x]);
-                lbDescripcion.Items.Add(descripcion[x]);
-                lbCapitulos.Items.Add(capitulos[x]);
+                GridArreglos.Rows.Add(nombres[x], descripcion[x], capitulos[x]);
             }
         }
 
@@ -186,6 +174,15 @@ namespace ProyectoSeries_DLL_JSVE.Forms
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        private void panelBotones_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

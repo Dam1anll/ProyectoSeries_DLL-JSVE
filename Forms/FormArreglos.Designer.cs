@@ -28,200 +28,257 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnIngresarArreglos = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.lbNombres = new System.Windows.Forms.ListBox();
-            this.lbDescripcion = new System.Windows.Forms.ListBox();
-            this.lbCapitulos = new System.Windows.Forms.ListBox();
             this.txtTamaño = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.btnOrdenarCapitulos = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
+            this.GridArreglos = new System.Windows.Forms.DataGridView();
+            this.NombreSerie = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DescripcionSerie = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NroCapitulosSerie = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panelBotones = new System.Windows.Forms.Panel();
+            this.panelGrid = new System.Windows.Forms.Panel();
+            this.btnCerrar = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.GridArreglos)).BeginInit();
+            this.panelBotones.SuspendLayout();
+            this.panelGrid.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(299, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(165, 42);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Arreglos";
             // 
             // btnIngresarArreglos
             // 
-            this.btnIngresarArreglos.Location = new System.Drawing.Point(75, 170);
+            this.btnIngresarArreglos.BackColor = System.Drawing.Color.DarkGreen;
+            this.btnIngresarArreglos.FlatAppearance.BorderSize = 0;
+            this.btnIngresarArreglos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIngresarArreglos.ForeColor = System.Drawing.Color.White;
+            this.btnIngresarArreglos.Location = new System.Drawing.Point(34, 133);
             this.btnIngresarArreglos.Name = "btnIngresarArreglos";
-            this.btnIngresarArreglos.Size = new System.Drawing.Size(185, 44);
+            this.btnIngresarArreglos.Size = new System.Drawing.Size(195, 35);
             this.btnIngresarArreglos.TabIndex = 2;
-            this.btnIngresarArreglos.Text = "Ingresar";
-            this.btnIngresarArreglos.UseVisualStyleBackColor = true;
+            this.btnIngresarArreglos.Text = "Agregar";
+            this.btnIngresarArreglos.UseVisualStyleBackColor = false;
             this.btnIngresarArreglos.Click += new System.EventHandler(this.btnIngresarArreglos_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(49, 148);
+            this.label2.Location = new System.Drawing.Point(31, 111);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 16);
             this.label2.TabIndex = 4;
             this.label2.Text = "Tamaño:";
             // 
-            // lbNombres
-            // 
-            this.lbNombres.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.lbNombres.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lbNombres.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.lbNombres.FormattingEnabled = true;
-            this.lbNombres.ItemHeight = 16;
-            this.lbNombres.Location = new System.Drawing.Point(366, 142);
-            this.lbNombres.MultiColumn = true;
-            this.lbNombres.Name = "lbNombres";
-            this.lbNombres.Size = new System.Drawing.Size(123, 240);
-            this.lbNombres.TabIndex = 5;
-            // 
-            // lbDescripcion
-            // 
-            this.lbDescripcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.lbDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lbDescripcion.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.lbDescripcion.FormattingEnabled = true;
-            this.lbDescripcion.ItemHeight = 16;
-            this.lbDescripcion.Location = new System.Drawing.Point(495, 142);
-            this.lbDescripcion.Name = "lbDescripcion";
-            this.lbDescripcion.Size = new System.Drawing.Size(123, 240);
-            this.lbDescripcion.TabIndex = 6;
-            // 
-            // lbCapitulos
-            // 
-            this.lbCapitulos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.lbCapitulos.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lbCapitulos.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.lbCapitulos.FormattingEnabled = true;
-            this.lbCapitulos.ItemHeight = 16;
-            this.lbCapitulos.Location = new System.Drawing.Point(621, 142);
-            this.lbCapitulos.Name = "lbCapitulos";
-            this.lbCapitulos.Size = new System.Drawing.Size(123, 240);
-            this.lbCapitulos.TabIndex = 7;
-            // 
             // txtTamaño
             // 
-            this.txtTamaño.Location = new System.Drawing.Point(116, 142);
+            this.txtTamaño.Location = new System.Drawing.Point(98, 105);
             this.txtTamaño.Name = "txtTamaño";
-            this.txtTamaño.Size = new System.Drawing.Size(100, 22);
+            this.txtTamaño.Size = new System.Drawing.Size(121, 22);
             this.txtTamaño.TabIndex = 8;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(388, 114);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(87, 25);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Nombre";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label4.Location = new System.Drawing.Point(493, 114);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(125, 25);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "Descripcion";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label5.Location = new System.Drawing.Point(624, 114);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(103, 25);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "Capitulos";
             // 
             // btnOrdenarCapitulos
             // 
-            this.btnOrdenarCapitulos.Location = new System.Drawing.Point(75, 322);
+            this.btnOrdenarCapitulos.BackColor = System.Drawing.Color.Goldenrod;
+            this.btnOrdenarCapitulos.FlatAppearance.BorderSize = 0;
+            this.btnOrdenarCapitulos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOrdenarCapitulos.ForeColor = System.Drawing.Color.White;
+            this.btnOrdenarCapitulos.Location = new System.Drawing.Point(265, 345);
             this.btnOrdenarCapitulos.Name = "btnOrdenarCapitulos";
-            this.btnOrdenarCapitulos.Size = new System.Drawing.Size(185, 45);
+            this.btnOrdenarCapitulos.Size = new System.Drawing.Size(195, 35);
             this.btnOrdenarCapitulos.TabIndex = 12;
             this.btnOrdenarCapitulos.Text = "Ordenar";
-            this.btnOrdenarCapitulos.UseVisualStyleBackColor = true;
+            this.btnOrdenarCapitulos.UseVisualStyleBackColor = false;
             this.btnOrdenarCapitulos.Click += new System.EventHandler(this.btnOrdenarCapitulos_Click);
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(75, 220);
+            this.btnEditar.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnEditar.FlatAppearance.BorderSize = 0;
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditar.ForeColor = System.Drawing.Color.White;
+            this.btnEditar.Location = new System.Drawing.Point(466, 345);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(185, 45);
+            this.btnEditar.Size = new System.Drawing.Size(195, 35);
             this.btnEditar.TabIndex = 13;
             this.btnEditar.Text = "Editar";
-            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.UseVisualStyleBackColor = false;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(75, 271);
+            this.btnEliminar.BackColor = System.Drawing.Color.Firebrick;
+            this.btnEliminar.FlatAppearance.BorderSize = 0;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.ForeColor = System.Drawing.Color.White;
+            this.btnEliminar.Location = new System.Drawing.Point(667, 345);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(185, 45);
+            this.btnEliminar.Size = new System.Drawing.Size(195, 35);
             this.btnEliminar.TabIndex = 14;
             this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // GridArreglos
+            // 
+            this.GridArreglos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.GridArreglos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(95)))));
+            this.GridArreglos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.GridArreglos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle31.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle31.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle31.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle31.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle31.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.GridArreglos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle31;
+            this.GridArreglos.ColumnHeadersHeight = 20;
+            this.GridArreglos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.GridArreglos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.NombreSerie,
+            this.DescripcionSerie,
+            this.NroCapitulosSerie});
+            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle35.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle35.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle35.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle35.SelectionBackColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle35.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle35.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.GridArreglos.DefaultCellStyle = dataGridViewCellStyle35;
+            this.GridArreglos.EnableHeadersVisualStyles = false;
+            this.GridArreglos.GridColor = System.Drawing.Color.SteelBlue;
+            this.GridArreglos.Location = new System.Drawing.Point(268, 105);
+            this.GridArreglos.Name = "GridArreglos";
+            this.GridArreglos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
+            dataGridViewCellStyle36.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(95)))));
+            dataGridViewCellStyle36.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle36.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle36.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle36.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle36.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.GridArreglos.RowHeadersDefaultCellStyle = dataGridViewCellStyle36;
+            this.GridArreglos.RowHeadersWidth = 51;
+            this.GridArreglos.RowTemplate.Height = 24;
+            this.GridArreglos.Size = new System.Drawing.Size(706, 234);
+            this.GridArreglos.TabIndex = 15;
+            // 
+            // NombreSerie
+            // 
+            dataGridViewCellStyle32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(95)))));
+            dataGridViewCellStyle32.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle32.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.Color.White;
+            this.NombreSerie.DefaultCellStyle = dataGridViewCellStyle32;
+            this.NombreSerie.HeaderText = "Nombre";
+            this.NombreSerie.MinimumWidth = 6;
+            this.NombreSerie.Name = "NombreSerie";
+            // 
+            // DescripcionSerie
+            // 
+            dataGridViewCellStyle33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(95)))));
+            dataGridViewCellStyle33.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle33.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle33.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle33.SelectionForeColor = System.Drawing.Color.White;
+            this.DescripcionSerie.DefaultCellStyle = dataGridViewCellStyle33;
+            this.DescripcionSerie.HeaderText = "Descripcion";
+            this.DescripcionSerie.MinimumWidth = 6;
+            this.DescripcionSerie.Name = "DescripcionSerie";
+            // 
+            // NroCapitulosSerie
+            // 
+            dataGridViewCellStyle34.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(95)))));
+            dataGridViewCellStyle34.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle34.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle34.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle34.SelectionForeColor = System.Drawing.Color.White;
+            this.NroCapitulosSerie.DefaultCellStyle = dataGridViewCellStyle34;
+            this.NroCapitulosSerie.HeaderText = "Nro.Capitulos";
+            this.NroCapitulosSerie.MinimumWidth = 6;
+            this.NroCapitulosSerie.Name = "NroCapitulosSerie";
+            // 
+            // panelBotones
+            // 
+            this.panelBotones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(41)))), ((int)(((byte)(81)))));
+            this.panelBotones.Controls.Add(this.txtTamaño);
+            this.panelBotones.Controls.Add(this.label2);
+            this.panelBotones.Controls.Add(this.btnIngresarArreglos);
+            this.panelBotones.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelBotones.Location = new System.Drawing.Point(0, 0);
+            this.panelBotones.Name = "panelBotones";
+            this.panelBotones.Size = new System.Drawing.Size(259, 518);
+            this.panelBotones.TabIndex = 16;
+            this.panelBotones.Paint += new System.Windows.Forms.PaintEventHandler(this.panelBotones_Paint);
+            // 
+            // panelGrid
+            // 
+            this.panelGrid.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(41)))), ((int)(((byte)(81)))));
+            this.panelGrid.Controls.Add(this.btnEliminar);
+            this.panelGrid.Controls.Add(this.btnOrdenarCapitulos);
+            this.panelGrid.Controls.Add(this.btnCerrar);
+            this.panelGrid.Controls.Add(this.btnEditar);
+            this.panelGrid.Controls.Add(this.panelBotones);
+            this.panelGrid.Controls.Add(this.GridArreglos);
+            this.panelGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelGrid.Location = new System.Drawing.Point(0, 0);
+            this.panelGrid.Name = "panelGrid";
+            this.panelGrid.Size = new System.Drawing.Size(986, 518);
+            this.panelGrid.TabIndex = 17;
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.AutoSize = true;
+            this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrar.ForeColor = System.Drawing.Color.White;
+            this.btnCerrar.Location = new System.Drawing.Point(948, 23);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(26, 25);
+            this.btnCerrar.TabIndex = 17;
+            this.btnCerrar.Text = "X";
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // FormArreglos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnEliminar);
-            this.Controls.Add(this.btnEditar);
-            this.Controls.Add(this.btnOrdenarCapitulos);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtTamaño);
-            this.Controls.Add(this.lbCapitulos);
-            this.Controls.Add(this.lbDescripcion);
-            this.Controls.Add(this.lbNombres);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.btnIngresarArreglos);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(986, 518);
+            this.Controls.Add(this.panelGrid);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormArreglos";
             this.Text = "FormArreglos";
+            ((System.ComponentModel.ISupportInitialize)(this.GridArreglos)).EndInit();
+            this.panelBotones.ResumeLayout(false);
+            this.panelBotones.PerformLayout();
+            this.panelGrid.ResumeLayout(false);
+            this.panelGrid.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnIngresarArreglos;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ListBox lbDescripcion;
-        private System.Windows.Forms.ListBox lbCapitulos;
         private System.Windows.Forms.TextBox txtTamaño;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnOrdenarCapitulos;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnEliminar;
-        public System.Windows.Forms.ListBox lbNombres;
+        private System.Windows.Forms.DataGridView GridArreglos;
+        private System.Windows.Forms.Panel panelBotones;
+        private System.Windows.Forms.Panel panelGrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NombreSerie;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DescripcionSerie;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NroCapitulosSerie;
+        private System.Windows.Forms.Label btnCerrar;
     }
 }

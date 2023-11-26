@@ -49,5 +49,9 @@ namespace ProyectoSeries_DLL_JSVE
             this.panelContenedor.Tag = fh;
             fh.Show();
         }
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
