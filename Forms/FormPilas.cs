@@ -16,10 +16,5 @@ namespace ProyectoSeries_DLL_JSVE.Forms
         {
             InitializeComponent();
         }
-
-        string[] nombres;
-        int[] capitulos;
-        string[] descripcion;
-        int tamaño;
     }
 }

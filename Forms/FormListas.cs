@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProyectoSeries_DLL_JSVE.Metodos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,79 +8,36 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ProyectoSeries_DLL_JSVE.Clases;
 
 namespace ProyectoSeries_DLL_JSVE.Forms
 {
     public partial class FormListas : Form
     {
-        private Nodo cabezaLista;
+        private ListasMetodos listasMetodos;
         public FormListas()
         {
             InitializeComponent();
-            cabezaLista = null;
+            listasMetodos = new ListasMetodos(GridListas, txtNombre, txtDescripcion, txtNroCapitulos);
         }
 
-        //Agregar Lista
-        private void btnAgregarLista_Click(object sender, EventArgs e)
+        private void btnAgregar_Click(object sender, EventArgs e)
         {
-            string nombre = txtNombre.Text;
-            string descripcion = txtDescripcion.Text;
-
-            if (int.TryParse(txtNroCapitulos.Text, out int nroCapitulos))
-            {
-                Serie nuevaSerie = new Serie(nombre, descripcion, nroCapitulos);
-                if (AgregarASerie(nuevaSerie))
-                {
-                    MostrarListas();
-                    LimpiarTextBoxes();
-                }
-                else
-                {
-                    MessageBox.Show("Error al agregar la serie.");
-                }
-            }
-            else
-            {
-                MessageBox.Show("Ingrese un número válido para el número de capítulos.");
-            }
+            listasMetodos.AgregarSerie();
         }
 
-        private bool AgregarASerie(Serie nuevaSerie)
+        private void btnEliminar_Click(object sender, EventArgs e)
         {
-            try
-            {
-                Nodo nuevoNodo = new Nodo(nuevaSerie);
-                nuevoNodo.siguiente = cabezaLista;
-                cabezaLista = nuevoNodo;
-
-                return true;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error al agregar la serie: {ex.Message}");
-                return false;
-            }
+            listasMetodos.EliminarSeriePorId();
         }
 
-        private void MostrarListas()
+        private void btnEditar_Click(object sender, EventArgs e)
         {
-            GridListas.Rows.Clear();
-
-            Nodo nodoActual = cabezaLista;
-            while (nodoActual != null)
-            {
-                Serie serieActual = nodoActual.datos;
-                GridListas.Rows.Add(serieActual.nombre, serieActual.descripcion, serieActual.nroCapitulos);
-                nodoActual = nodoActual.siguiente;
-            }
+            listasMetodos.EditarSerieSeleccionada();
         }
 
-        private void LimpiarTextBoxes()
+        private void btnOrdenar_Click(object sender, EventArgs e)
         {
-            txtNombre.Text = string.Empty;
-            txtDescripcion.Text = string.Empty;
-            txtNroCapitulos.Text = string.Empty;
+            listasMetodos.Ordenar();
         }
-    } 
+    }
 }

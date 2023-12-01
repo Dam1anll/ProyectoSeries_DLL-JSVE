@@ -41,16 +41,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
+            this.btnAgregar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnOrdenarCola = new System.Windows.Forms.Button();
-            this.btnEditarCola = new System.Windows.Forms.Button();
-            this.btnEliminarCola = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.GridColas = new System.Windows.Forms.DataGridView();
             this.NombreSerie = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DescripcionSerie = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NroCapitulosSerie = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnAgregarCola = new System.Windows.Forms.Button();
+            this.btnOrdenar = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridColas)).BeginInit();
@@ -65,12 +65,12 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.txtNombre);
-            this.panel1.Controls.Add(this.btnAgregarCola);
+            this.panel1.Controls.Add(this.btnAgregar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(259, 518);
-            this.panel1.TabIndex = 2;
+            this.panel1.Size = new System.Drawing.Size(259, 471);
+            this.panel1.TabIndex = 3;
             // 
             // txtNroCapitulos
             // 
@@ -123,58 +123,43 @@
             this.txtNombre.Size = new System.Drawing.Size(133, 22);
             this.txtNombre.TabIndex = 11;
             // 
+            // btnAgregar
+            // 
+            this.btnAgregar.BackColor = System.Drawing.Color.DarkGreen;
+            this.btnAgregar.FlatAppearance.BorderSize = 0;
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregar.ForeColor = System.Drawing.Color.White;
+            this.btnAgregar.Location = new System.Drawing.Point(24, 223);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(195, 35);
+            this.btnAgregar.TabIndex = 10;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = false;
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(41)))), ((int)(((byte)(81)))));
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.GridColas);
-            this.panel2.Controls.Add(this.btnOrdenarCola);
-            this.panel2.Controls.Add(this.btnEditarCola);
-            this.panel2.Controls.Add(this.btnEliminarCola);
+            this.panel2.Controls.Add(this.btnOrdenar);
+            this.panel2.Controls.Add(this.btnEditar);
+            this.panel2.Controls.Add(this.btnEliminar);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(259, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(727, 518);
-            this.panel2.TabIndex = 3;
+            this.panel2.Size = new System.Drawing.Size(709, 471);
+            this.panel2.TabIndex = 4;
             // 
-            // btnOrdenarCola
+            // label1
             // 
-            this.btnOrdenarCola.BackColor = System.Drawing.Color.Goldenrod;
-            this.btnOrdenarCola.FlatAppearance.BorderSize = 0;
-            this.btnOrdenarCola.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOrdenarCola.ForeColor = System.Drawing.Color.White;
-            this.btnOrdenarCola.Location = new System.Drawing.Point(9, 334);
-            this.btnOrdenarCola.Name = "btnOrdenarCola";
-            this.btnOrdenarCola.Size = new System.Drawing.Size(195, 35);
-            this.btnOrdenarCola.TabIndex = 9;
-            this.btnOrdenarCola.Text = "Ordenar";
-            this.btnOrdenarCola.UseVisualStyleBackColor = false;
-            // 
-            // btnEditarCola
-            // 
-            this.btnEditarCola.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnEditarCola.FlatAppearance.BorderSize = 0;
-            this.btnEditarCola.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditarCola.ForeColor = System.Drawing.Color.White;
-            this.btnEditarCola.Location = new System.Drawing.Point(210, 334);
-            this.btnEditarCola.Name = "btnEditarCola";
-            this.btnEditarCola.Size = new System.Drawing.Size(195, 35);
-            this.btnEditarCola.TabIndex = 7;
-            this.btnEditarCola.Text = "Editar";
-            this.btnEditarCola.UseVisualStyleBackColor = false;
-            // 
-            // btnEliminarCola
-            // 
-            this.btnEliminarCola.BackColor = System.Drawing.Color.Firebrick;
-            this.btnEliminarCola.FlatAppearance.BorderSize = 0;
-            this.btnEliminarCola.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminarCola.ForeColor = System.Drawing.Color.White;
-            this.btnEliminarCola.Location = new System.Drawing.Point(411, 334);
-            this.btnEliminarCola.Name = "btnEliminarCola";
-            this.btnEliminarCola.Size = new System.Drawing.Size(195, 35);
-            this.btnEliminarCola.TabIndex = 8;
-            this.btnEliminarCola.Text = "Eliminar";
-            this.btnEliminarCola.UseVisualStyleBackColor = false;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(325, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(80, 29);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "Colas";
             // 
             // GridColas
             // 
@@ -219,7 +204,7 @@
             this.GridColas.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.GridColas.RowHeadersWidth = 51;
             this.GridColas.RowTemplate.Height = 24;
-            this.GridColas.Size = new System.Drawing.Size(706, 234);
+            this.GridColas.Size = new System.Drawing.Size(688, 234);
             this.GridColas.TabIndex = 17;
             // 
             // NombreSerie
@@ -258,36 +243,50 @@
             this.NroCapitulosSerie.MinimumWidth = 6;
             this.NroCapitulosSerie.Name = "NroCapitulosSerie";
             // 
-            // label1
+            // btnOrdenar
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(310, 26);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 29);
-            this.label1.TabIndex = 18;
-            this.label1.Text = "Colas";
+            this.btnOrdenar.BackColor = System.Drawing.Color.Goldenrod;
+            this.btnOrdenar.FlatAppearance.BorderSize = 0;
+            this.btnOrdenar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOrdenar.ForeColor = System.Drawing.Color.White;
+            this.btnOrdenar.Location = new System.Drawing.Point(9, 334);
+            this.btnOrdenar.Name = "btnOrdenar";
+            this.btnOrdenar.Size = new System.Drawing.Size(195, 35);
+            this.btnOrdenar.TabIndex = 9;
+            this.btnOrdenar.Text = "Ordenar";
+            this.btnOrdenar.UseVisualStyleBackColor = false;
             // 
-            // btnAgregarCola
+            // btnEditar
             // 
-            this.btnAgregarCola.BackColor = System.Drawing.Color.DarkGreen;
-            this.btnAgregarCola.FlatAppearance.BorderSize = 0;
-            this.btnAgregarCola.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregarCola.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarCola.Location = new System.Drawing.Point(24, 223);
-            this.btnAgregarCola.Name = "btnAgregarCola";
-            this.btnAgregarCola.Size = new System.Drawing.Size(195, 35);
-            this.btnAgregarCola.TabIndex = 10;
-            this.btnAgregarCola.Text = "Agregar";
-            this.btnAgregarCola.UseVisualStyleBackColor = false;
+            this.btnEditar.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnEditar.FlatAppearance.BorderSize = 0;
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditar.ForeColor = System.Drawing.Color.White;
+            this.btnEditar.Location = new System.Drawing.Point(210, 334);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(195, 35);
+            this.btnEditar.TabIndex = 7;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = false;
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.BackColor = System.Drawing.Color.Firebrick;
+            this.btnEliminar.FlatAppearance.BorderSize = 0;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.ForeColor = System.Drawing.Color.White;
+            this.btnEliminar.Location = new System.Drawing.Point(411, 334);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(195, 35);
+            this.btnEliminar.TabIndex = 8;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = false;
             // 
             // FormColas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(41)))), ((int)(((byte)(81)))));
-            this.ClientSize = new System.Drawing.Size(986, 518);
+            this.ClientSize = new System.Drawing.Size(968, 471);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -303,6 +302,7 @@
         }
 
         #endregion
+
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txtNroCapitulos;
         private System.Windows.Forms.TextBox txtDescripcion;
@@ -310,15 +310,15 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btnOrdenarCola;
-        private System.Windows.Forms.Button btnEditarCola;
-        private System.Windows.Forms.Button btnEliminarCola;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView GridColas;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreSerie;
         private System.Windows.Forms.DataGridViewTextBoxColumn DescripcionSerie;
         private System.Windows.Forms.DataGridViewTextBoxColumn NroCapitulosSerie;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnAgregarCola;
+        private System.Windows.Forms.Button btnOrdenar;
+        private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.Button btnEliminar;
     }
 }

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static ProyectoSeries_DLL_JSVE.Forms.FormListas;
 
 namespace ProyectoSeries_DLL_JSVE.Clases
 {
