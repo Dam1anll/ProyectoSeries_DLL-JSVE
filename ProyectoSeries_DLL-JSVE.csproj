@@ -47,6 +47,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\Nodo.cs" />
+    <Compile Include="Clases\Serie.cs" />
     <Compile Include="FormMainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +79,10 @@
     <Compile Include="Forms\FormPilas.Designer.cs">
       <DependentUpon>FormPilas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Metodos\ArreglosMetodos.cs" />
+    <Compile Include="Metodos\ColasMetodos.cs" />
+    <Compile Include="Metodos\ListasMetodos.cs" />
+    <Compile Include="Metodos\PilasMetodos.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormMainMenu.resx">
@@ -118,14 +124,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\video.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\viendo-una-pelicula.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\mostrar-codigo.png" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
